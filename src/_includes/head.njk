@@ -2,7 +2,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ title or "CarApp" }}</title>
 <meta name="description" content="{{ description or 'CarApp — marketplace de vehículos.' }}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<link rel="alternate" hreflang="es-AR" href="{{ site.url }}/es-ar/">
+<link rel="alternate" hreflang="es-UY" href="{{ site.url }}/es-uy/">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CarApp">
+<meta property="og:title" content="{{ title or 'CarApp' }}">
+<meta property="og:description" content="{{ description or 'CarApp — marketplace de vehículos.' }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ ogLocale or 'es_419' }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title or 'CarApp' }}">
+<meta name="twitter:description" content="{{ description or 'CarApp — marketplace de vehículos.' }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/img/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CarApp",
+  "url": "{{ site.url }}/",
+  "logo": "{{ site.url }}/assets/img/carapp-logo-color.png"
+}
+</script>
