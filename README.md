@@ -29,7 +29,7 @@ The marketplace apps (Bubble) live on `argentina.carapp.pro` and `uruguay.carapp
 ## Stack
 
 - [Eleventy (11ty)](https://www.11ty.dev/) — build-time templating only, ships zero client-side JS/framework runtime. Used so every landing page shares the same header/footer instead of hand-copy-pasted HTML.
-- Cloudflare Pages — build command `npx @11ty/eleventy`, output directory `_site`
+- [Vercel](https://vercel.com) (team: Bonaparte) — Git-connected. Build command `npx @11ty/eleventy`, output directory `_site`. `master` is the Production Branch (`carapp.pro`); other branches deploy as Preview URLs (currently aliased at `carapp-pi-pied.vercel.app`).
 - No CMS
 
 ## Fonts
@@ -47,4 +47,4 @@ npm start   # local dev server with live reload
 npm run build   # outputs static site to _site/
 ```
 
-Deployment is automatic via Cloudflare Pages on push to `main`.
+Deployment is automatic via Vercel: push to `master` for production, push any other branch (e.g. `preview`) for a preview deployment.

@@ -13,10 +13,11 @@ uruguay.carapp.pro/      → Uruguay app (Bubble — Ataraxy Digital)
 ```
 
 ## Stack
-- Hosting: Cloudflare Pages (or Cloudflare + GitHub Actions)
-- Code: Pure HTML/CSS/JS — no page builders, no CMS
-- DNS: carapp.pro (domain owner: CarApp — credentials pending)
-- Repo: GitHub (BONAPARTE-managed)
+- Hosting: Vercel (team: Bonaparte). Git-connected to this repo — `master` is the Production Branch (`carapp.pro`), other branches deploy as Previews. Preview alias: `carapp-pi-pied.vercel.app`.
+- Build: Eleventy (11ty) — build command `npx @11ty/eleventy`, output directory `_site`
+- Code: HTML/CSS/JS via Eleventy templating — no CMS
+- DNS: carapp.pro — domain access granted, confirmed live and pointed at Vercel as of 2026-07-21
+- Repo: GitHub (BONAPARTE-managed), BonaparteDigital/carapp
 
 ## Key Contacts
 | Name | Role | Contact |
@@ -26,12 +27,12 @@ uruguay.carapp.pro/      → Uruguay app (Bubble — Ataraxy Digital)
 | Martin Alcalde | Dev — Bubble apps | martin@ataraxydigital.com |
 
 ## Project Status
-- [ ] Domain access to carapp.pro granted to BONAPARTE (BLOCKER)
+- [x] Domain access to carapp.pro granted to BONAPARTE
+- [x] BONAPARTE builds country selector (carapp.pro/) — live, flags link directly to argentina.carapp.pro / uruguay.carapp.pro
+- [x] Vercel connected: production → carapp.pro (master branch), preview → carapp-pi-pied.vercel.app
 - [ ] Martin migrates apps to argentina.carapp.pro / uruguay.carapp.pro
-- [ ] BONAPARTE builds country selector (carapp.pro/)
-- [ ] BONAPARTE builds Argentina landing (carapp.pro/es-ar/)
-- [ ] BONAPARTE builds Uruguay landing (carapp.pro/es-uy/)
-- [ ] Cloudflare DNS configured
+- [ ] BONAPARTE builds Argentina landing (carapp.pro/es-ar/) — placeholder only, not linked from selector
+- [ ] BONAPARTE builds Uruguay landing (carapp.pro/es-uy/) — placeholder only, not linked from selector
 - [ ] Ad pixels + UTM tracking wired up
 
 ## Important Context

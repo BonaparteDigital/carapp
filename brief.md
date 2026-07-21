@@ -19,7 +19,7 @@ CarApp's current setup has the marketplace (app) and marketing pages mixed under
 - Country selector homepage
 - Argentina landing page
 - Uruguay landing page
-- Cloudflare DNS configuration
+- DNS / Vercel domain configuration
 - Pixel setup (Meta + Google) per country
 - UTM tracking implementation
 
@@ -29,13 +29,13 @@ CarApp's current setup has the marketplace (app) and marketing pages mixed under
 - User auth, listings, payments
 
 ## Stack
-- Pure HTML/CSS/JS — no frameworks required unless complexity demands it
-- Cloudflare Pages for hosting
+- Eleventy (11ty) build-time templating — output is plain HTML/CSS, no client-side framework runtime
+- Vercel for hosting (team: Bonaparte), Git-connected — `master` deploys to production (`carapp.pro`), other branches get preview URLs
 - GitHub for version control
-- No CMS, no builders
+- No CMS, no page builders
 
 ## Why carapp.pro (not separate domains)
-Keeping Argentina and Uruguay under the same root domain preserves SEO authority, avoids backlink fragmentation, and means one Cloudflare account, one GitHub repo, one place to manage DNS. Switching domains after launch costs months of ranking recovery — decision is final.
+Keeping Argentina and Uruguay under the same root domain preserves SEO authority, avoids backlink fragmentation, and means one Vercel project, one GitHub repo, one place to manage DNS. Switching domains after launch costs months of ranking recovery — decision is final.
 
 ## Client
 CarApp — Gonzalo Perez Dematteis & Sebastian Fernandez
