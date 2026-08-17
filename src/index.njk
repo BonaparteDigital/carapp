@@ -2,6 +2,9 @@
 layout: null
 title: CarApp — Elegí tu país
 description: CarApp — el marketplace de vehículos de Argentina y Uruguay.
+gtmIds:
+  - GTM-MBMX73TD
+  - GTM-MH9WX66R
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -9,10 +12,12 @@ description: CarApp — el marketplace de vehículos de Argentina y Uruguay.
 {% include "head.njk" %}
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH9WX66R"
+{% for gtmId in gtmIds %}
+<!-- Google Tag Manager (noscript, {{ gtmId }}) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ gtmId }}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript, {{ gtmId }}) -->
+{% endfor %}
 <section class="splash">
   <div class="splash__logo">
     <img src="/assets/img/carapp-logo-white.png" alt="CarApp" height="40">
